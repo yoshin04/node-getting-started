@@ -1,0 +1,12 @@
+<div>
+  <form action="<%= `/courses/${course._id}/update?_method=PUT` %>">
+    <h2>Edit Course</h2>
+    <label for="inputCourseTitle">Title</label>
+    <input type="text" name="title" id="inputCourseTitle" placeholder="Title" value="<%= course.title %>" autofocus>
+    <label for="inputDescription">Description</label>
+    <input type="text" name="Description" id="inputDescription" value="<%= course.description %>" placeholder="Description" required>
+    <label for="inputCost">Cost</label>
+    <input type="number" name="cost" id="inputCost" value="<%= course.cost %>" placeholder="Cost" required>
+    <button type="submit">Update</button> 
+  </form>
+</div>
