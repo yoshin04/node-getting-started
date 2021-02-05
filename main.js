@@ -47,6 +47,7 @@ app.use(
 );
 app.use(express.json());
 
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(layouts);
 app.use('/', router);
@@ -55,6 +56,6 @@ app.use(
     methods: ['POST', 'GET'],
   })
 );
-app.use(express.static('public'));
+
 
 app.listen(3000);
